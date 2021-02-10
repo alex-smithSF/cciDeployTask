@@ -3,7 +3,7 @@ project:
     name: cciDeployTask
     package:
         name: Sample project to test the failure when running a deploy task where the task and metadata are in another project.
-        namespace: 
+        namespace: cciDeployTask
         api_version: 49.0
     source_format: sfdx
     git:
@@ -15,3 +15,9 @@ sources:
         # Comment out the github version and uncomment the local version (and update path) to test local changes to libraryProject
         #github: https://github.com/CovidBackToWork/workdotcom
         path: /Users/alex.smith/libraryProject
+
+    tasks:
+        robot:
+        options:
+            sources:
+                - libraryProject
